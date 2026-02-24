@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="834.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.tareas.controllers.IndexController">
+   <children>
+      <Label layoutX="289.0" layoutY="25.0" text="Sistema de Tareas" textFill="#2998e5">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Label>
+      <TableView fx:id="tareasTabla" layoutX="308.0" layoutY="100.0" onMouseClicked="#cargarTareaFormulario" prefHeight="200.0" prefWidth="498.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="53.0" text="ID" />
+          <TableColumn fx:id="tareaColumn" prefWidth="152.0" text="Tarea" />
+            <TableColumn fx:id="responsableColumn" prefWidth="130.0" text="Responsable" />
+            <TableColumn fx:id="estadoColumn" prefWidth="163.0" text="Estado" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="45.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Tarea">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="tareaText" layoutX="14.0" layoutY="31.0" />
+            <Label layoutX="16.0" layoutY="71.0" text="Responsable">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="responsableText" layoutX="14.0" layoutY="88.0" />
+            <Label layoutX="16.0" layoutY="129.0" text="Estado">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ComboBox fx:id="estadoCBox" layoutX="14.0" layoutY="146.0" prefWidth="150.0" promptText="Seleccionar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="32.0" layoutY="309.0" prefHeight="75.0" prefWidth="773.0">
+         <children>
+            <Button fx:id="agregarButton" layoutX="75.0" layoutY="25.0" mnemonicParsing="false" onAction="#agregarTarea" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #2362d0;" text="Guardar" textFill="#f2e6e6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="eliminarButton" layoutX="325.0" layoutY="25.0" mnemonicParsing="false" onAction="#eliminarTarea" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: dd2424;" text="Eliminar" textFill="#f2e6e6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="limpiarButton" layoutX="562.0" layoutY="25.0" mnemonicParsing="false" onAction="#limpiarFormulario" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: cdca1d;" text="Limpiar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
